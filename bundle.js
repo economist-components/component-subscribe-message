@@ -15882,6 +15882,11 @@ module.exports = I13nUtils;
 
 var React = require('react');
 var subscribe = require('subscribe-ui-event').subscribe;
+var DEFAULT_VIEWPORT_MARGINS = {
+    usePercent: false,
+    top: 20,
+    bottom: 20
+};
 
 /* Viewport mixin assumes you are on browser and already have the scroll lib */
 var Viewport = {
@@ -15905,7 +15910,8 @@ var Viewport = {
             return callback && callback();
         }
         var rect = element.getBoundingClientRect();
-        var viewportMargins = this.props.viewport.margins;
+        var viewportMargins = Object.assign({}, DEFAULT_VIEWPORT_MARGINS, 
+            (this.props.viewport && this.props.viewport.margins) || {});
         var margins;
         if (viewportMargins.usePercent) {
             margins = {
@@ -15929,18 +15935,6 @@ var Viewport = {
         }
         self._detectElement(self._i13nNode, self.enterViewportCallback, callback);
         self._subComponentsViewportDetection && self._subComponentsViewportDetection();
-    },
-
-    getDefaultProps: function () {
-        return {
-            viewport: {
-                margins: {
-                    usePercent: false,
-                    top: 20,
-                    bottom: 20
-                }
-            }
-        };
     },
 
     subscribeViewportEvents: function () {
@@ -16300,7 +16294,6 @@ module.exports = function createI13nNode (Component, defaultProps, options) {
          */
         getDefaultProps: function () {
             return Object.assign({}, {
-                model: null,
                 i13nModel: null,
                 isLeafNode: false,
                 bindClickEvent: false,
@@ -16326,9 +16319,7 @@ module.exports = function createI13nNode (Component, defaultProps, options) {
             }
 
             // delete the props that only used in this level
-            props.model = undefined;
             props.i13nModel = undefined;
-            props.viewport = undefined;
 
             return React.createElement(
                 Component,
