@@ -117,7 +117,7 @@ body {
 }
 
 .bar-wrapper {
-  font-family: 'Halifax Regular', Tahoma, sans-serif;
+  font-family: 'EconSans', Tahoma, sans-serif;
   font-size: 0.79012em;
   line-height: 1.34;
   padding: 1.45em 18px;
@@ -153,60 +153,9 @@ body {
   margin: auto;
 }
 
-/**
- * Modular scale for type.
- */
-
-:root {
-  /** Modular scale **/
-  /* http://www.modularscale.com/?20&px&1.125&web&text */  /* Major second */
-
-  /** Line heights **/
-
-  /* Font: Halifax Regular */
-
-  /* Font: Halifax Bold */
-
-  /* Font: Halifax Light */
-
-  /* Font: Ff Milo Serif Pro Med Italic */
-
-  /* Font: Ff Milo Serif Pro */
-
-  /* Font: FF Milo Serif OT Medium */
-
-  /** Letter spacing **/
-  /* Font: Halifax Regular */
-
-  /* Font: Halifax Bold */
-
-  /* Font: Halifax Light */
-
-  /* Font: Ff Milo Serif Pro Med Italic */
-
-  /* Font: Ff Milo Serif Pro */
-
-  /* Font: FF Milo Serif OT Medium */
-}
-
-html {
-  line-height: 1.35;
-  font-size: 18px;
-}
-
-@media screen and (min-width: 500px) {
-  html {
-    font-size: 20px;
-  }
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-}
-
 .link-button--styled {
   display: inline-block;
-  font-family: 'Halifax Regular', Tahoma, sans-serif;
+  font-family: 'EconSans', Tahoma, sans-serif;
   font-size: 0.88889em;
   line-height: 1.4;
   text-decoration: none;
@@ -240,6 +189,10 @@ body {
 }
 
 .subscribe-message {
+  /* We need to add .bar-wrapper to overcome the bar-wrapper styles without using !important */
+}
+
+.subscribe-message.bar-wrapper {
   max-width: inherit;
   padding: 18px;
   padding: 1rem;
@@ -249,77 +202,91 @@ body {
   background: #383E42;
 }
 
-.subscribe-message--container {
+.subscribe-message .subscribe-message--container {
   box-sizing: border-box;
   max-width: inherit;
 }
 
-.subscribe-message--close-wrapper {
+.subscribe-message .subscribe-message--close-wrapper {
   top: 0;
   right: 0;
 }
 
-.subscribe-message--close {
-  width: 1.125em;
-  height: 1.125em;
+.subscribe-message .subscribe-message--close {
+  width: 1.13em;
+  height: 1.13em;
   fill: #FFFFFF;
 }
 
-.subscribe-message__main-cta {
+.subscribe-message .subscribe-message__main-cta {
   margin-top: 0.35em;
-  font-size: 0.79012em;
+  font-size: 0.79em;
 }
 
-.subscribe-message__subscribe-link {
+.subscribe-message .subscribe-message__subscribe-link {
   margin-top: 0.35em;
   padding: 0.35em
-    1.111em;
-  font-size: 0.88889em;
+      1.111em;
+  font-size: 0.89em;
   background: #E3120b;
 }
 
-.subscribe-message__image {
+.subscribe-message .subscribe-message__image {
   display: none;
 }
 
 @media screen and (min-width: 950px) {
-  .subscribe-message__image {
+
+  .subscribe-message {}
+
+  .subscribe-message .subscribe-message__image {
     float: left;
     position: absolute;
     bottom: 0;
-    left: 0;
-    /* Image natural dimensions */
+    left: 0; /* Image natural dimensions */
     width: 182px;
     height: 135px;
   }
-  .subscribe-message__main-cta {
+
+  .subscribe-message .subscribe-message__main-cta {
     display: inline-block;
     font-size: 1em;
   }
-  .subscribe-message__subscribe-link {
-    float: right;
-    /* stylelint-disable function-calc-no-unspaced-operator, function-parentheses-space-inside */
-    /* Disabled because they bug out with newlines. See
-       https://github.com/stylelint/stylelint/issues/857 (function-calc-no-unspaced-operator)
-    */
-    margin-top: -0.79013em;
-    /* stylelint-enable function-calc-no-unspaced-operator, function-parentheses-space-inside */
+
+  .subscribe-message .subscribe-message__subscribe-link {
+    float: right; /* stylelint-disable function-calc-no-unspaced-operator, function-parentheses-space-inside */ /* Disabled because they bug out with newlines. See
+         https://github.com/stylelint/stylelint/issues/857 (function-calc-no-unspaced-operator)
+      */
+    margin-top: calc(
+          -1 *
+          calc(
+            calc(
+              0.89em
+                )
+              ) +
+            0.35em -
+            0.35em
+            ) *
+        0.89em
+        )
+        ); /* stylelint-enable function-calc-no-unspaced-operator, function-parentheses-space-inside */
   }
-}
+  }
 
 @media screen and (min-width: 1300px) {
-  .subscribe-message--container {
-    /* stylelint-disable function-calc-no-unspaced-operator, function-parentheses-space-inside */
-    /* Disabled because they bug out with newlines. See
-       https://github.com/stylelint/stylelint/issues/857 (function-calc-no-unspaced-operator)
-    */
+
+  .subscribe-message {}
+
+  .subscribe-message .subscribe-message--container { /* stylelint-disable function-calc-no-unspaced-operator, function-parentheses-space-inside */ /* Disabled because they bug out with newlines. See
+         https://github.com/stylelint/stylelint/issues/857 (function-calc-no-unspaced-operator)
+      */
     padding-left: calc(
-        182px +
-        0.35em
-      );
-    /* stylelint-enable function-calc-no-unspaced-operator, function-parentheses-space-inside  */
+          182px +
+          0.35em
+        ); /* stylelint-enable function-calc-no-unspaced-operator, function-parentheses-space-inside  */
   }
-  .subscribe-message__image {
+
+  .subscribe-message .subscribe-message__image {
     display: block;
   }
-}
+  }
