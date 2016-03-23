@@ -204,7 +204,6 @@ body {
 
 .subscribe-message .subscribe-message--container {
   box-sizing: border-box;
-  max-width: inherit;
 }
 
 .subscribe-message .subscribe-message--close-wrapper {
@@ -290,3 +289,11 @@ body {
     display: block;
   }
   }
+
+.subscribe-message--container {
+  max-width: inherit;
+}
+
+.bar-wrapper--container {
+  max-width: 1000px;
+}
