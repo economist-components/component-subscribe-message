@@ -1,50 +1,73 @@
+/* stylelint-disable custom-property-pattern, number-max-precision */
+
 @font-face {
-  font-family: "EconSans";
+  font-family: EconSans;
   font-weight: 300;
-  src: url('/assets/ecosans-lig.woff2') format('woff2'), /* Super Modern Browsers */
-  url('/assets/ecosans-lig.woff') format('woff'); /* Pretty Modern Browsers */
+  src:
+    /* Super Modern Browsers */
+    url('/assets/ecosans-lig.woff2') format('woff2'),
+    /* Pretty Modern Browsers */
+    url('/assets/ecosans-lig.woff') format('woff');
 }
 
 @font-face {
-  font-family: "EconSans";
+  font-family: EconSans;
   font-style: normal;
-  src: url('/assets/ecosans-reg.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/assets/ecosans-reg.woff') format('woff'); /* Pretty Modern Browsers */
+  src:
+    /* Super Modern Browsers */
+    url('/assets/ecosans-reg.woff2') format('woff2'),
+    /* Pretty Modern Browsers */
+    url('/assets/ecosans-reg.woff') format('woff');
 }
 
 @font-face {
-  font-family: "EconSans";
+  font-family: EconSans;
   font-weight: 700;
-  src: url('/assets/ecosans-bol.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/assets/ecosans-bol.woff') format('woff'); /* Pretty Modern Browsers */
+  src:
+    /* Super Modern Browsers */
+    url('/assets/ecosans-bol.woff2') format('woff2'),
+    /* Pretty Modern Browsers */
+    url('/assets/ecosans-bol.woff') format('woff');
 }
 
 @font-face {
-  font-family: "EconSans";
+  font-family: EconSans;
   font-style: italic;
-  src: url('/assets/ecosans-ita.woff2') format('woff2'), /* Super Modern Browsers */
-  url('/assets/ecosans-ita.woff') format('woff'); /* Pretty Modern Browsers */
+  src:
+    /* Super Modern Browsers */
+    url('/assets/ecosans-ita.woff2') format('woff2'),
+    /* Pretty Modern Browsers */
+    url('/assets/ecosans-ita.woff') format('woff');
 }
 
 @font-face {
-  font-family: "MiloSerifPro";
+  font-family: MiloSerifPro;
   font-style: normal;
-  src: url('/assets/ecoserif-reg.woff2') format('woff2'), /* Super Modern Browsers */
-  url('/assets/ecoserif-reg.woff') format('woff'); /* Pretty Modern Browsers */
+  src:
+    /* Super Modern Browsers */
+    url('/assets/ecoserif-reg.woff2') format('woff2'),
+    /* Pretty Modern Browsers */
+    url('/assets/ecoserif-reg.woff') format('woff');
 }
 
 @font-face {
-  font-family: "MiloSerifPro";
+  font-family: MiloSerifPro;
   font-style: italic;
-  src: url('/assets/ecoserif-ita.woff2') format('woff2'), /* Super Modern Browsers */
-  url('/assets/ecoserif-ita.woff') format('woff'); /* Pretty Modern Browsers */
+  src:
+    /* Super Modern Browsers */
+    url('/assets/ecoserif-ita.woff2') format('woff2'),
+    /* Pretty Modern Browsers */
+    url('/assets/ecoserif-ita.woff') format('woff');
 }
 
 @font-face {
-  font-family: "MiloSerifPro";
+  font-family: MiloSerifPro;
   font-weight: 500;
-  src: url('/assets/ecoserif-med.woff2') format('woff2'), /* Super Modern Browsers */
-  url('/assets/ecoserif-med.woff') format('woff'); /* Pretty Modern Browsers */
+  src:
+    /* Super Modern Browsers */
+    url('/assets/ecoserif-med.woff2') format('woff2'),
+    /* Pretty Modern Browsers */
+    url('/assets/ecoserif-med.woff') format('woff');
 }
 
 /**
@@ -83,9 +106,11 @@
   /* Font: FF Milo Serif OT Medium */
 }
 
+/* stylelint-disable selector-no-type */
+
 html {
-  line-height: 1.35;
   font-size: 18px;
+  line-height: 1.35;
 }
 
 @media screen and (min-width: 500px) {
@@ -95,8 +120,8 @@ html {
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 /**
@@ -163,8 +188,8 @@ body {
   text-decoration: none;
   padding: 0.714em 36px;
   padding: 0.714em 2rem;
-  background-color: #3E51B5;
-  color: #FFFFFF;
+  background-color: #3e51b5;
+  color: #fff;
   border-radius: .3em;
   cursor: pointer;
   -webkit-user-select: none;
@@ -174,7 +199,7 @@ body {
 }
 
 .link-button--disabled {
-  background-color: #B6B6B6;
+  background-color: #b6b6b6;
   cursor: default;
 }
 
@@ -198,10 +223,10 @@ body {
   max-width: inherit;
   padding: 18px;
   padding: 1rem;
-  color: #FFFFFF;
+  color: #fff;
   font-size: 18px;
   font-size: 1rem;
-  background: #383E42;
+  background: #383e42;
 }
 
 .subscribe-message .subscribe-message--container {
@@ -216,7 +241,7 @@ body {
 .subscribe-message .subscribe-message--close {
   width: 1.13em;
   height: 1.13em;
-  fill: #FFFFFF;
+  fill: #fff;
 }
 
 .subscribe-message .subscribe-message__main-cta {
@@ -229,7 +254,7 @@ body {
   padding: 0.35em
       1.111em;
   font-size: 0.89em;
-  background: #E3120b;
+  background: #e3120b;
 }
 
 .subscribe-message .subscribe-message__image {
@@ -244,7 +269,7 @@ body {
     float: left;
     position: absolute;
     bottom: 0;
-    left: 0; /* Image natural dimensions */
+    left: 0;/* Image natural dimensions */
     width: 182px;
     height: 135px;
   }
@@ -255,7 +280,7 @@ body {
   }
 
   .subscribe-message .subscribe-message__subscribe-link {
-    float: right; /* stylelint-disable function-calc-no-unspaced-operator, function-parentheses-space-inside */ /* Disabled because they bug out with newlines. See
+    float: right;/* stylelint-disable function-calc-no-unspaced-operator, function-parentheses-space-inside *//* Disabled because they bug out with newlines. See
          https://github.com/stylelint/stylelint/issues/857 (function-calc-no-unspaced-operator)
       */
     margin-top: calc(
@@ -270,7 +295,7 @@ body {
             ) *
         0.89em
         )
-        ); /* stylelint-enable function-calc-no-unspaced-operator, function-parentheses-space-inside */
+        );/* stylelint-enable function-calc-no-unspaced-operator, function-parentheses-space-inside */
   }
   }
 
@@ -278,13 +303,13 @@ body {
 
   .subscribe-message {}
 
-  .subscribe-message .subscribe-message--container { /* stylelint-disable function-calc-no-unspaced-operator, function-parentheses-space-inside */ /* Disabled because they bug out with newlines. See
+  .subscribe-message .subscribe-message--container {/* stylelint-disable function-calc-no-unspaced-operator, function-parentheses-space-inside *//* Disabled because they bug out with newlines. See
          https://github.com/stylelint/stylelint/issues/857 (function-calc-no-unspaced-operator)
       */
     padding-left: calc(
           182px +
           0.35em
-        ); /* stylelint-enable function-calc-no-unspaced-operator, function-parentheses-space-inside  */
+        );/* stylelint-enable function-calc-no-unspaced-operator, function-parentheses-space-inside  */
   }
 
   .subscribe-message .subscribe-message__image {
