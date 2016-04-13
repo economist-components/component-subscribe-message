@@ -283,16 +283,7 @@ body {
     float: right;/* stylelint-disable function-calc-no-unspaced-operator, function-parentheses-space-inside *//* Disabled because they bug out with newlines. See
          https://github.com/stylelint/stylelint/issues/857 (function-calc-no-unspaced-operator)
       */
-    margin-top: calc(
-          -1 *
-          calc(
-            calc(
-              0.89em
-                )
-              ) +
-            0.35em -
-            0.35em
-            ) *
+    margin-top: -0.89em *
         0.89em
         )
         );/* stylelint-enable function-calc-no-unspaced-operator, function-parentheses-space-inside */
