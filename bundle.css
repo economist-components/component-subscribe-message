@@ -144,72 +144,75 @@ body {
 }
 
 .bar-wrapper {
+  padding: 1.45em
+    18px;
+  padding: 1.45em
+    1rem;
   font-family: 'EconSans', Tahoma, sans-serif;
   font-size: 0.79012em;
   line-height: 1.34;
-  padding: 1.45em 18px;
-  padding: 1.45em 1rem;
 }
 
 .bar-wrapper--close {
   /* Not magic numbers.
    * The icon is supposed to have 1em of height, but it currently has
    * 1em of useless space surrounding it. */
-  height: 2em;
   width: 2em;
+  height: 2em;
 }
 
 .bar-wrapper--close-wrapper {
   position: absolute;
-  right: 18px;
-  right: 1rem;
-  cursor: pointer;
-  /* Compensate Icon's white space */
   top: -0.5em;
   right: -0.5em;
+  margin: -1em;
+  padding: 1em;
+  cursor: pointer;
   /* Fat-finger friendliness */
   /* padding:1em offsets it to the sides, pull it back in. */
-  padding: 1em;
-  margin: -1em;
 }
 
 .bar-wrapper--container {
   position: relative;
-  padding-right: 2.5em;
   max-width: 1000px;
   margin: auto;
+  padding-right: 2.5em;
 }
 
 .link-button--styled {
   display: inline-block;
-  font-family: 'EconSans', Tahoma, sans-serif;
-  font-size: 0.88889em;
-  line-height: 1.4;
-  text-decoration: none;
-  padding: 0.714em 36px;
-  padding: 0.714em 2rem;
-  background-color: #3e51b5;
-  color: #fff;
-  border-radius: .3em;
+  padding: 20px
+    20px;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  color: #000;
+  font-family: Tahoma, sans-serif;
+  font-size: 0.8em;
+  line-height: 1.4;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 0.3em;
 }
 
 .link-button--disabled {
-  background-color: #b6b6b6;
   cursor: default;
+  background-color: #c0c0c0;
 }
 
 .link-button--shadow {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
+/* stylelint-disable selector-no-type */
+
 .link-button__group svg {
   vertical-align: bottom;
 }
+
+/* stylelint-enable selector-no-type */
 
 .link-button__icon {
   vertical-align: middle;
@@ -253,6 +256,7 @@ body {
   margin-top: 0.35em;
   padding: 0.35em
       1.111em;
+  color: #fff;
   font-size: 0.89em;
   background: #e3120b;
 }
@@ -280,13 +284,8 @@ body {
   }
 
   .subscribe-message .subscribe-message__subscribe-link {
-    float: right;/* stylelint-disable function-calc-no-unspaced-operator, function-parentheses-space-inside *//* Disabled because they bug out with newlines. See
-         https://github.com/stylelint/stylelint/issues/857 (function-calc-no-unspaced-operator)
-      */
-    margin-top: -0.89em *
-        0.89em
-        )
-        );/* stylelint-enable function-calc-no-unspaced-operator, function-parentheses-space-inside */
+    float: right;
+    margin-top: -0.7921em;
   }
   }
 
@@ -294,13 +293,11 @@ body {
 
   .subscribe-message {}
 
-  .subscribe-message .subscribe-message--container {/* stylelint-disable function-calc-no-unspaced-operator, function-parentheses-space-inside *//* Disabled because they bug out with newlines. See
-         https://github.com/stylelint/stylelint/issues/857 (function-calc-no-unspaced-operator)
-      */
+  .subscribe-message .subscribe-message--container {
     padding-left: calc(
           182px +
           0.35em
-        );/* stylelint-enable function-calc-no-unspaced-operator, function-parentheses-space-inside  */
+        );
   }
 
   .subscribe-message .subscribe-message__image {
